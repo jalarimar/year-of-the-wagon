@@ -49,5 +49,6 @@ func _ready():
 	set_process_input(true)
 	pass
 
-func _on_wheat_body_enter(body):
-	print("hit wheat")
+func _on_wheat_body_enter(body, wheat):
+	print("hit wheat" + wheat.get_name())
+	wheat.queue_free()
