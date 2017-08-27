@@ -13,7 +13,7 @@ const hedge_scene = preload("res://hedge.tscn")
 func new_crop(crop_type, i, j):
 	var crop = crop_scene.instance()
 	crop.set_pos(Vector2(i*32, j*32))
-	crop.set_crop_type(crop_type)
+	crop.crop_type = crop_type
 	add_child(crop)
 	crop.connect("area_enter", wagode, "_on_crop_collide", [crop])
 

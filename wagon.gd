@@ -27,6 +27,7 @@ func _on_wagontimer_timeout():
 	
 	if picked_up_crop != null:
 		var wagon_cart = wagon_cart_scene.instance()
+		wagon_cart.crop_type = picked_up_crop
 		wagon_tail.append(wagon_cart)
 		add_child(wagon_cart)
 		wagon_cart.connect("area_enter", self, "_on_wagon_collide")
@@ -36,7 +37,8 @@ func _on_wagontimer_timeout():
 		wagon_tail[i].set_pos(positions[i])
 
 func _on_crop_collide(area, crop):
-	picked_up_crop = crop
+	picked_up_crop = crop.crop_type
+	
 	crop.queue_free()
 	
 func _on_wagon_collide(area):

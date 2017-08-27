@@ -18,7 +18,7 @@ script/script = ExtResource( 2 )
 
 [node name="wagon-head" parent="game/wagon" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 288, 128 )
+transform/pos = Vector2( 128, 352 )
 
 [node name="wagon-timer" type="Timer" parent="game/wagon"]
 

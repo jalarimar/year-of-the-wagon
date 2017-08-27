@@ -1,6 +1,6 @@
 extends Area2D
 
-onready var crop_type = 0 setget set_crop_type
+var crop_type = 0 setget set_crop_type
 
 func set_crop_type(new_type):
 	var sprites = get_node("sprites")
