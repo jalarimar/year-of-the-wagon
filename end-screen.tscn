@@ -1,0 +1,37 @@
+[gd_scene format=1]
+
+[node name="end-screen" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+
+rect/scale = Vector2( 10, 10 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 64.0
+margin/top = 96.0
+margin/right = 192.0
+margin/bottom = 160.0
+text = "YOU LOSE"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label" type="Label" parent="Label"]
+
+rect/rotation = -90.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 36.0
+margin/top = 22.0
+margin/right = 76.0
+margin/bottom = 36.0
+text = ": ("
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+
