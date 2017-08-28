@@ -32,6 +32,7 @@ func _input(event):
 			cur_dir = Dir.EAST
 
 func move_wagon():
+	print("h")
 	move_dir = cur_dir
 	set_pos(get_pos() + dir_xy[move_dir] * 32)
 
