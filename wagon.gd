@@ -1,6 +1,7 @@
 extends Node2D
 
 signal lose_signal
+signal next_screen_signal
 
 var picked_up_crop = null
 var wagon_tail = []
@@ -38,9 +39,9 @@ func _on_wagontimer_timeout():
 
 func _on_crop_collide(area, crop):
 	picked_up_crop = crop.crop_type
-	
 	crop.queue_free()
 	
 func _on_wagon_collide(area):
 	if area.get_name() == "wagon-head":
-		emit_signal("lose_signal")
+		#emit_signal("lose_signal")
+		emit_signal("next_screen_signal", ["north"])
