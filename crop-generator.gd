@@ -1,6 +1,6 @@
 extends Node2D
 
-onready var wagode = get_parent().get_node("wagon")
+onready var wagode = get_node("../../../wagon")
 
 enum Crop {
 	WHEAT = 0,
@@ -24,11 +24,11 @@ func new_obstacle(obstacle_scene, i, j):
 	obstacle.connect("area_enter", wagode, "_on_wagon_collide")
 
 func generate_hedges():
-	for i in range(0, 26):
-		for j in [0, 20]:
+	for i in range(0, 25):
+		for j in [0]:
 			new_obstacle(hedge_scene, i, j)
-	for i in [0, 25]:
-		for j in range(0, 21):
+	for i in [0]:
+		for j in range(0, 20):
 			new_obstacle(hedge_scene, i, j)
 
 func generate_crops():
