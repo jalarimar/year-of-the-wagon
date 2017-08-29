@@ -1,6 +1,5 @@
 extends Node
 
-# class member variables go here, for example:
 var explored_scenes = {}
 var x = 0
 var y = 0
@@ -24,15 +23,3 @@ func _lose():
 	
 func _next_screen(dir):
 	print("change")
-	var current_scene = get_node("game")
-	explored_scenes[Vector2(x, y)] = current_scene
-	remove_child(current_scene)
-	
-	if dir == "north":
-		y += 1
-	elif dir == "east":
-		x += 1
-	elif dir == "south":
-		y -= 1
-	elif dir == "west":
-		x -= 1
