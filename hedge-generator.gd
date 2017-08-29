@@ -1,3 +1,4 @@
+tool
 extends Node2D
 
 const hedge_scene = preload("res://hedge.tscn")

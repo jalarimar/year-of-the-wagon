@@ -27,7 +27,7 @@ func get_option():
 	
 	var running_sum = 0
 	for k in gen.keys():
-		if running_sum <= r  and r < running_sum + gen[k].chance:
+		if running_sum <= r and r < running_sum + gen[k].chance:
 			return k
 		
 		running_sum += gen[k].chance
