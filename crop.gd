@@ -1,3 +1,4 @@
+tool
 extends Area2D
 
 var crop_type = 0 setget set_crop_type
