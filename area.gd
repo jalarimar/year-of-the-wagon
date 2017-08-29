@@ -12,8 +12,8 @@ var gen = {
 		"scene": preload("res://crop-generator.tscn")
 	},
 	Type.STATION: {
-		"chance": 25,
-		"scene": preload("res://crop-generator.tscn")
+		"chance": 500,
+		"scene": preload("res://station-generator.tscn")
 	},
 }
 
@@ -25,7 +25,7 @@ func get_option():
 	
 	var running_sum = 0
 	for k in gen.keys():
-		if running_sum <= r < running_sum + gen[k].chance:
+		if running_sum <= r  and r < running_sum + gen[k].chance:
 			return k
 		
 		running_sum += gen[k].chance
