@@ -8,10 +8,12 @@
 
 [node name="YOTW" type="Node"]
 
+process/pause_mode = 2
 script/script = ExtResource( 1 )
 
 [node name="game" type="Node2D" parent="."]
 
+process/pause_mode = 1
 script/script = ExtResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="game"]
@@ -46,7 +48,7 @@ transform/pos = Vector2( 128, 352 )
 [node name="wagon-timer" type="Timer" parent="game/wagon"]
 
 process_mode = 1
-wait_time = 0.1
+wait_time = 0.3
 one_shot = false
 autostart = true
 

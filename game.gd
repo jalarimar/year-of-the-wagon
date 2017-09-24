@@ -34,7 +34,6 @@ func spawn_areas():
 			get_node("areas").add_child(area)
 
 func _ready():
-	
 	spawn_areas()
 	set_process(true)
 
